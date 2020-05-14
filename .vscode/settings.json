@@ -1,0 +1,8 @@
+{
+  "files.exclude": {
+    "server-egg2/logs": true,
+    "server-egg2/package-lock.json": true,
+    "client-vue2/package-lock.json": true,
+    "db-script/package-lock.json": true
+  }
+}
