@@ -13,6 +13,7 @@ module.exports = (app) => {
   const { controller } = app
   const { test } = controller
   router.get('/test/model_keys', test.modelKeys)
+  router.get('/test/cookie_session', test.cookieSession)
 
   const { login } = controller
   router.get('/login', login.login)
