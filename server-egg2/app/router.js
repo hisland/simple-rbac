@@ -17,6 +17,8 @@ module.exports = (app) => {
   const { login } = controller
   router.get('/login', login.login)
   router.get('/logout', needLogin, login.logout)
+  const { captcha } = controller
+  router.get('/captcha', captcha.captcha)
 
   const { user } = controller
   router.get('/user-list-all', user.getListAll)

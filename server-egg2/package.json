@@ -13,7 +13,8 @@
     "egg-scripts": "^2.11.0",
     "egg-validate": "^2.0.2",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
