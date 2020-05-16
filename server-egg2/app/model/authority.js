@@ -1,13 +1,12 @@
 module.exports = (app, conn) => {
   const { mongoose } = app
-  const { Schema } = mongoose
-  const { ObjectId } = Schema.Types
+  const { Schema, ObjectId } = mongoose
 
   const SchemaDef = new Schema({
-    key: { type: String, required: [true, '必须设置权限key'] },
-    remark: { type: String },
+    key: { type: String, required: [true, '必须设置权限key'], default: null },
+    remark: { type: String, default: '' },
   })
-  const name = 'authority'
 
-  return (conn || mongoose).model(name, SchemaDef, name)
+  const name = 'authority'
+  return(conn || mongoose).model(name, SchemaDef, name)
 }
