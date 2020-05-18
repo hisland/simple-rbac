@@ -17,7 +17,7 @@ module.exports = (appInfo) => {
 
   config.cluster = {
     listen: {
-      port: 9622,
+      port: 9722,
     },
   }
 
