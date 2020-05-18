@@ -82,15 +82,14 @@ module.exports = (appInfo) => {
   }
 
   // add your middleware config here
-  config.middleware = ['graphql']
-
-  // add your user config here
-  const userConfig = {
-    // myAppName: 'egg',
+  config.middleware = ['needLogin', 'graphql']
+  config.needLogin = {
+    ignore: [
+      /^\/api\/login$/, //
+      /^\/api\/captcha$/,
+      /^\/api\/test/,
+    ],
   }
 
-  return {
-    ...config,
-    ...userConfig,
-  }
+  return config
 }
