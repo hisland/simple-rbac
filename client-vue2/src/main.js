@@ -10,7 +10,7 @@ import 'view-design/dist/styles/iview.css'
 import ViewDesign from 'view-design'
 Vue.use(ViewDesign)
 
-import '@/components/index.js'
+import '@/hdl-iview/main.js'
 import '@/filter.js'
 
 import VueRouter from 'vue-router'
