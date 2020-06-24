@@ -8,5 +8,5 @@ module.exports = (app, conn) => {
   })
 
   const name = 'role_authority_map'
-  return(conn || mongoose).model(name, SchemaDef, name)
+  return (conn || mongoose).model(name, SchemaDef, name)
 }

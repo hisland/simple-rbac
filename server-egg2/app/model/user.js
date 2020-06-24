@@ -13,5 +13,5 @@ module.exports = (app, conn) => {
   })
 
   const name = 'user'
-  return(conn || mongoose).model(name, SchemaDef, name)
+  return (conn || mongoose).model(name, SchemaDef, name)
 }

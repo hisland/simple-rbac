@@ -11,5 +11,5 @@ module.exports = (app, conn) => {
   })
 
   const name = 'role'
-  return(conn || mongoose).model(name, SchemaDef, name)
+  return (conn || mongoose).model(name, SchemaDef, name)
 }
