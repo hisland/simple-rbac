@@ -6,18 +6,20 @@
 module.exports = (app) => {
   const { router } = app
   router.prefix('/api')
+  const { controller } = app
 
   const { auth } = app.middleware
+  const { checkCaptcha } = app.middleware
 
-  const { controller } = app
   const { test } = controller
   router.get('/test/model_keys', test.modelKeys)
   router.get('/test/cookie_session', test.cookieSession)
 
   const { captcha } = controller
   router.get('/captcha', captcha.captcha)
+
   const { login } = controller
-  router.get('/login', login.login)
+  router.get('/login', checkCaptcha, login.login)
   router.get('/logout', login.logout)
 
   const { user } = controller
